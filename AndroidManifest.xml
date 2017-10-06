@@ -16,10 +16,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name=".Proceed_page"
-            android:label="@string/title_activity_proceed_page" >
-        </activity>
+        
         <activity
             android:name=".FirstActivity"
             android:label="@string/app_name" >
@@ -34,7 +31,7 @@
             android:label="@string/title_activity_display_message" >
         </activity>
         <activity
-            android:name=".ProcessImage"
+            android:name=".EncryptMessage"
             android:label="@string/title_activity_process_image" >
         </activity>
         <activity

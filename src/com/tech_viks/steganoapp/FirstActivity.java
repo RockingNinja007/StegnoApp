@@ -1,7 +1,9 @@
 package com.tech_viks.steganoapp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -19,6 +21,7 @@ public class FirstActivity extends Activity {
 	Button enc,dec;
 	private static final int SELECT_PICTURE = 1;
 	String selected_image_URL; // stores url of the image to be used
+	int backFlag = 0;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -37,7 +40,7 @@ public class FirstActivity extends Activity {
 				
 				//if(selected_image_URL!=null || selected_image_URL!=""){
 				try{
-					Intent toprocess = new Intent(FirstActivity.this,ProcessImage.class);
+					Intent toprocess = new Intent(FirstActivity.this,EncryptMessage.class);
 					//toDisplayMessage.putExtra("ImageURL", selected_image_URL);
 					startActivity(toprocess);
 				}
@@ -112,6 +115,34 @@ public class FirstActivity extends Activity {
         }
         // this is our fallback here
         return uri.getPath();
+	}
+	
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		backFlag=0;
+	}
+	
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		if (backFlag!=0) {
+			super.onBackPressed();
+		}
+		//super.onBackPressed();
+				
+		AlertDialog adb = new AlertDialog.Builder(FirstActivity.this).setTitle("Are you sure you want to exit")
+				.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// TODO Auto-generated method stub
+						backFlag+=1;
+						onBackPressed();
+					}
+				})
+				.setNegativeButton("Cancel", null).show();
 	}
 	
 }

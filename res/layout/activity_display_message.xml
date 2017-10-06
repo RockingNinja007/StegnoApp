@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.tech_viks.steganoapp.DisplayMessage" >
+    tools:context="com.tech_viks.steganoapp.DisplayMessage" 
+    android:background="#eee">
 
     <TextView
         android:id="@+id/messageText"

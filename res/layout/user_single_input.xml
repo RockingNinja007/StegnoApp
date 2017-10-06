@@ -8,9 +8,9 @@
 	    <EditText
 	        android:id="@+id/user_input"
 	        android:layout_width="0dp"
-	        android:layout_height="wrap_content"
+	        android:layout_height="30dp"
 	        android:layout_weight="1"
-	       	android:textSize="18sp"
+	       	android:textSize="15sp"
 	       	android:hint="Enter name for the file"
 	       	android:padding="5dp" >
 	
