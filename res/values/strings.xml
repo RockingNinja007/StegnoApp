@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SteganoApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_proceed_page">Proceed_page</string>
+    <string name="title_activity_first">FirstActivity</string>
+    <string name="title_activity_display_message">DisplayMessage</string>
+    <string name="pathToUse">Captures</string>
+    <string name="title_activity_process_image">ProcessImage</string>
+    <string name="title_activity_get_external_image">GetExternalImage</string>
+    
+</resources>
