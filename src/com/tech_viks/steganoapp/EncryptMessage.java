@@ -30,7 +30,7 @@ import android.widget.Toast;
 
 public class EncryptMessage extends Activity {
 
-	String selected_image_URL=""; // to store the path of choosed image
+	String selected_image_URL=""; // to store the path of chosen image
 	String newFileName="";  // to store the stegno image (file name)
 	TextView Imagepath,message_error;
 	Button selectImage,proceed;
@@ -74,7 +74,7 @@ public class EncryptMessage extends Activity {
 					// TODO Auto-generated method stub
 					//Toast.makeText(ProcessImage.this, "working!", Toast.LENGTH_LONG).show();
 					
-					if(selected_image_URL != null || selected_image_URL != "")
+					if(selected_image_URL != null && selected_image_URL != "")
 					{
 						
 						processImage.createStegoImage(selected_image_URL, getMessageString.getText().toString());
