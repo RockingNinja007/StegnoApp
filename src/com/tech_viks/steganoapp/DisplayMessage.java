@@ -21,14 +21,24 @@ public class DisplayMessage extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+		try{
 		process_image = new ProcessImage();
+		
 		setContentView(R.layout.activity_display_message);
 		message = (TextView)findViewById(R.id.messageText);
 		Bundle bndl = getIntent().getExtras();
 		imageToProcess = bndl.getString("ImageURL");
+		if(imageToProcess==null || imageToProcess==""){
+		 Toast.makeText(getApplicationContext(), "no image seleted", Toast.LENGTH_LONG).show();
+		}
 		String message_to_show = process_image.displayMessage(imageToProcess);
-		message.setText("Message:\n\n"+message_to_show);
+		Toast.makeText(getApplicationContext(), message_to_show, Toast.LENGTH_LONG).show();
+		message.setText("Message:"+message_to_show);
+		}
+		catch(Exception e){
+			Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+			
+		}
 	}
 	
 	@Override

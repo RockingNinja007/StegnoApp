@@ -13,7 +13,8 @@
         android:id="@+id/messageText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="@string/hello_world" 
+        android:hint="" 
+        android:singleLine="false"
         android:gravity="center"
         android:textSize="20sp"
         android:textColor="#000"/>
